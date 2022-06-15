@@ -2,6 +2,8 @@ package main
 
 import "github.com/vladromanov/monster/interaction"
 
+var currentRound = 0
+
 func main() {
 	startGame()
 
@@ -19,7 +21,11 @@ func startGame() {
 }
 
 func executeRound() string {
+	currentRound++
+	isSpecialRound := currentRound%3 == 0
 
+	//User actions
+	interaction.ShowAvailableActions(isSpecialRound)
 }
 
 func endGame() {
