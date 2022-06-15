@@ -1,5 +1,7 @@
 package main
 
+import "github.com/vladromanov/monster/interaction"
+
 func main() {
 	startGame()
 
@@ -13,7 +15,7 @@ func main() {
 }
 
 func startGame() {
-
+	interaction.PrintGreeting()
 }
 
 func executeRound() string {
